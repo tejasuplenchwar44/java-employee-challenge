@@ -1,0 +1,41 @@
+# Test configuration for Employee API
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  h2:
+    console:
+      enabled: true
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: false
+  mvc:
+    throw-exception-if-no-handler-found: true
+
+# External API configuration for tests
+employee:
+  api:
+    base-url: http://localhost:8113
+    timeout: 30000
+
+# Logging configuration for tests
+logging:
+  level:
+    com.reliaquest.api: INFO
+    org.springframework.web: WARN
+    root: WARN
+
+# Cache configuration for tests
+spring.cache:
+  type: simple
+
+server:
+  error:
+    whitelabel:
+      enabled: false

@@ -3,6 +3,20 @@ plugins {
 }
 
 dependencies {
+    // Spring Boot validation starter for request validation
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+    
+    // Spring Boot cache starter for caching support
+    implementation 'org.springframework.boot:spring-boot-starter-cache'
+    
+    // Spring Boot actuator for monitoring and health checks
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    
+    // Spring Retry for resilience
+    implementation 'org.springframework.retry:spring-retry'
+    implementation 'org.springframework:spring-aspects'
+    
+    // Test dependencies
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 

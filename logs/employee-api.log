@@ -1,0 +1,12 @@
+2025-09-21 13:36:30 [main] INFO  com.reliaquest.api.ApiApplication - Starting ApiApplication using Java 17.0.16 with PID 1649 (/Users/tejasuplenchwar/java-employee-challenge/api/build/classes/java/main started by tejasuplenchwar in /Users/tejasuplenchwar/java-employee-challenge)
+2025-09-21 13:36:30 [main] INFO  com.reliaquest.api.ApiApplication - No active profile set, falling back to 1 default profile: "default"
+2025-09-21 13:36:32 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8111 (http)
+2025-09-21 13:36:32 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-09-21 13:36:32 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
+2025-09-21 13:36:32 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-09-21 13:36:32 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1963 ms
+2025-09-21 13:36:34 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 3 endpoint(s) beneath base path '/actuator'
+2025-09-21 13:36:34 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8111 (http) with context path ''
+2025-09-21 13:36:34 [main] INFO  com.reliaquest.api.ApiApplication - Started ApiApplication in 4.001 seconds (process running for 4.526)
+2025-09-21 13:40:45 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-21 13:40:45 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete

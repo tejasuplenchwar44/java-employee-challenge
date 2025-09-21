@@ -1,2 +1,55 @@
-spring.application.name: employee-api
-server.port: 8111
+spring:
+  application:
+    name: employee-api
+  
+  # Cache configuration for improved performance
+  cache:
+    type: simple
+    cache-names: employees,employee
+
+
+server:
+  port: 8111
+  # Graceful shutdown for better scalability
+  shutdown: graceful
+  # Connection timeout configuration
+  tomcat:
+    connection-timeout: 20000
+    max-connections: 8192
+    threads:
+      max: 200
+      min-spare: 10
+
+# Employee API configuration
+employee:
+  api:
+    base-url: http://localhost:8112/api/v1/employee
+    retry:
+      max-attempts: 3
+      delay: 1000
+
+# Logging configuration
+logging:
+  level:
+    com.reliaquest.api: INFO
+    org.springframework.retry: DEBUG
+    org.springframework.web.client: DEBUG
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+  file:
+    name: logs/employee-api.log
+
+# Management endpoints for monitoring
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,prometheus
+  endpoint:
+    health:
+      show-details: always
+  prometheus:
+    metrics:
+      export:
+        enabled: true
